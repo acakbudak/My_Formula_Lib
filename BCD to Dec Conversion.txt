@@ -1,0 +1,25 @@
+/*
+* This text file represent the formula for this story:
+* if you have two bytes of a decimal number and each element of number is sent by 1 byte of data, for exemple;
+* the number is 25 and each digit of this number is sent in CHAR type  
+* and you need to convert this number to actual decimal code which is 0001 1001 
+* then convert 2 BCD code
+*
+* Steps:
+* 1)Convert 2 Bytes of CHAR type data to 2 bytes of HEX data
+* 2)Convert 2 bytes HEX data to Decimal number in 8 bits
+* 3)Convert 2 bytes of HEX data do BCD code
+*/
+
+/*   CODE  */
+char data[2] ;  // this 2 array represent the 2 Bytes of data 
+uint8_t data_BCD, data_dec; //Store elements
+data[0] = (char)( (uint8_t)data[0]-0x30 ); //Here we convert the char type code to hex code
+data[1] = (char)( (uint8_t)data[1]-0x30 ); //Here we convert the char type code to hex code
+
+/* Conversion to decimal */
+data_dec = (((uint8_t)data[0] * 10) + ((uint8_t)data[1] )); // and 
+
+/* Conversion to BCD */
+data[0] = (uint8_t)data[0] << 4;
+data_BCD = (data[0] | data[1]);
