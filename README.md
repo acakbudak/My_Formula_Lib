@@ -3,4 +3,4 @@
 ### This file includes some formulas for different kinds of trouble issues
   Constantly Updated.
 
-    1) BCD to decimal conversionas
+    1) BCD to decimal conversion
