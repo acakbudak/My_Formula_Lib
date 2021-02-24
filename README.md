@@ -1,7 +1,7 @@
-# When you need a superman.
+# When you need a Superman.
 
 ### These files include some formulas for different kinds of trouble issues
-  Constantly Updated.
+                         Constantly Updated.
 
     1) BCD to decimal conversion
 
