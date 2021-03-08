@@ -3,6 +3,7 @@
   *@params: PSC-> Timer Prescalar value
   *         ARR-> Timer Auto-Reload Register Value
   *         bus_clk_value-> The clock value of the bus which timer is hanging
+  *@result: time-> duration value in second(e.g 0.5s, 1s, 10s)
   ***************************************************************************************************/
    
    time = (bus_clk_value)/((PSC+1)*(ARR+1))
