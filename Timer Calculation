@@ -1,2 +1,0 @@
-  ## Defining Prescaler and Auto-Reload Register values for calculating dedicated interrupt time
-    time = (bus_clk_value)/((PSC+1)*(ARR+1))
