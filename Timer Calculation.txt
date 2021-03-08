@@ -1,5 +1,8 @@
-  ********************************************************************************************
-  Defining Prescaler and Auto-Reload Register values for calculating dedicated interrupt time
-  ********************************************************************************************
+  /***************************************************************************************************
+  *@brief: Defining Prescaler and Auto-Reload Register values for calculating dedicated interrupt time
+  *@params: PSC-> Timer Prescalar value
+  *         ARR-> Timer Auto-Reload Register Value
+  *         bus_clk_value-> The clock value of the bus which timer is hanging
+  ***************************************************************************************************/
    
    time = (bus_clk_value)/((PSC+1)*(ARR+1))
