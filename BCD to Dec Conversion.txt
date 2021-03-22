@@ -18,7 +18,15 @@ data[0] = (char)( (uint8_t)data[0]-0x30 ); //Here we convert the char type code 
 data[1] = (char)( (uint8_t)data[1]-0x30 ); //Here we convert the char type code to hex code
 
 /* Conversion to decimal */
-data_dec = (((uint8_t)data[0] * 10) + ((uint8_t)data[1] )); // and 
+/* As we made a conversion "data-0x30" to yield a raw data to store in char string and if recieved data is lower than 10 results with data[1] is D0 value */ 
+if( (uint8_t)data[1] < 10 ) 	/* Check if recieved data is lower then 10 */
+{
+data_dec = (((uint8_t)data[0] * 10) + ((uint8_t)data[1] )); 	/* two raw values are connected to get 2 digit decimal value */
+}else if((uint8_t)data[1] > 10)
+{
+data_dec = (uint8_t)data[0];  /* Here we eliminate the D0 value because data[0] holds the value lower than decimal 10 */ 
+}
+
 
 /* Conversion to BCD */
 data[0] = (uint8_t)data[0] << 4;
