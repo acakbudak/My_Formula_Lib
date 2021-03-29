@@ -1,0 +1,18 @@
+/*
+* This file is a demonstration of clearing scanf() function buffer
+*/
+
+/* 
+* If scanf buffer overflows then the next input value will be spoiled 
+* To prevent this user "fflush(stdin);" function for clearing input buffer
+* It can be used right after scanf() or at the end of main function to prevent overflow spoils
+*/
+
+e.g.
+
+  int result, input;
+	printf("Value:");
+  result = scanf("%c", &input);
+  printf("Value is: %c", input);
+  fflush(stdin); /* Input buffer is cleared */
+   
