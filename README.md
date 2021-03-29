@@ -5,6 +5,7 @@ Constantly Updated.
 
     1) BCD to decimal conversion
     2) Timer Calculation
+    3) Clearing Input Buffer in c/c++
 
   ### These are useful programs for related troubles
     1) Make_fsdata.exe  /* Converts needed files for HTTPd Custom FS Data into C File */
